@@ -2,6 +2,32 @@ Nume: Țălină Laura-Florina
 Grupa: 334CB
 
 TEMA2 APD
+Pe Git au fost publicate doar clasele implementate de catre mine, pentru ca proiectul
+sa fie functional in totalitate, este nevoie de checker-ul si testele oferite
+de echipa de APD.
+
+Cerinta temei consta in implementarea unui program paralel in Java pentru procesarea
+unui set de documente primit ca input, evaluarea lungimilor cuvintelor procesate,
+ordonarea documentelor in functie de lungimea cuvintelor si frecventa cu care acestea
+apar. Fiecare cuvant are asociata o valoare in functie de numarul de litere, fiind
+calculata pe baza unei formule, folosing sirul lui Fibonacci. Rangul documentului este
+calculat prin insumarea valorilor. Pentru fiecare document se va stabili cuvantul de
+lungime maxima.
+In urma procesului de parsare, se va determina numarul de litere al fiecarui
+cuvant existent intr-un document, obtinandu-se o lista de perechi {lungime, nr_aparitii}.
+
+Pentru paralelizarea procesarii documentelor, se va folosi modelul Map-Reducere.
+Fiecare document se va fragmenta in parti de dimensiune fixa, ce vor fi procesare
+in paralel(Map), pentru fiecare parte rezultand cate un dictionar partial( care contine
+lungimea cuvintelor si numarul de aparitii ale acestora) si o lista continand cuvintele 
+de dimensiune maxima din fragmentul procesat. Pasul urmator il reprezinta combinarea
+dictionarelor(Reduce), in urma careia se obtine un dictionar ce caracterizeaza intregul
+document, iar la fel se va face si in cazul listelor de cuvinte maximale. Pentru fiecare
+document se vor calcula rangul si numarul de cuvinte maximale.
+
+
+
+
 Proiectul are in componenta urmatoarele clase:
 -Tema2
 -Map
